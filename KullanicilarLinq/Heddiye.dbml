@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Heddiye" Class="HeddiyeDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=Heddiye;Integrated Security=True" SettingsObjectName="KullanicilarLinq.Properties.Settings" SettingsPropertyName="HeddiyeConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Admin" Member="Admins">
+    <Type Name="Admin">
+      <Column Name="email" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="şifre" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Burc" Member="Burcs">
+    <Type Name="Burc">
+      <Column Name="BurcId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="BurcAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="Burc_Urunler" Member="Urunlers" ThisKey="BurcId" OtherKey="BurcId" Type="Urunler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cinsiyet" Member="Cinsiyets">
+    <Type Name="Cinsiyet">
+      <Column Name="CinsiyetId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="CinsiyetAdi" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="Cinsiyet_Urunler" Member="Urunlers" ThisKey="CinsiyetId" OtherKey="CinsiyetId" Type="Urunler" />
+      <Association Name="Cinsiyet_YakinlikDerecesi" Member="YakinlikDerecesis" ThisKey="CinsiyetId" OtherKey="CinsiyetId" Type="YakinlikDerecesi" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HediyeAmaci" Member="HediyeAmacis">
+    <Type Name="HediyeAmaci">
+      <Column Name="HediyeAmacId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HediyeAmaci" Member="HediyeAmaci1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="HediyeAmaci_Urunler" Member="Urunlers" ThisKey="HediyeAmacId" OtherKey="HediyeAmacId" Type="Urunler" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Urunler" Member="Urunlers">
+    <Type Name="Urunler">
+      <Column Name="UrunId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UrunAdi" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CinsiyetId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="HediyeAmacId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YakinlikId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="YasId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="BurcId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Link" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Association Name="Burc_Urunler" Member="Burc" ThisKey="BurcId" OtherKey="BurcId" Type="Burc" IsForeignKey="true" />
+      <Association Name="Cinsiyet_Urunler" Member="Cinsiyet" ThisKey="CinsiyetId" OtherKey="CinsiyetId" Type="Cinsiyet" IsForeignKey="true" />
+      <Association Name="HediyeAmaci_Urunler" Member="HediyeAmaci" ThisKey="HediyeAmacId" OtherKey="HediyeAmacId" Type="HediyeAmaci" IsForeignKey="true" />
+      <Association Name="YakinlikDerecesi_Urunler" Member="YakinlikDerecesi" ThisKey="YakinlikId" OtherKey="YakinlikId" Type="YakinlikDerecesi" IsForeignKey="true" />
+      <Association Name="YasAraligi_Urunler" Member="YasAraligi" ThisKey="YasId" OtherKey="YasId" Type="YasAraligi" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.YakinlikDerecesi" Member="YakinlikDerecesis">
+    <Type Name="YakinlikDerecesi">
+      <Column Name="YakinlikId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YakinlikDerecesi" Member="YakinlikDerecesi1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="CinsiyetId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="YakinlikDerecesi_Urunler" Member="Urunlers" ThisKey="YakinlikId" OtherKey="YakinlikId" Type="Urunler" />
+      <Association Name="Cinsiyet_YakinlikDerecesi" Member="Cinsiyet" ThisKey="CinsiyetId" OtherKey="CinsiyetId" Type="Cinsiyet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.YasAraligi" Member="YasAraligis">
+    <Type Name="YasAraligi">
+      <Column Name="YasId" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="YasAraligi" Member="YasAraligi1" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="YasAraligi_Urunler" Member="Urunlers" ThisKey="YasId" OtherKey="YasId" Type="Urunler" />
+    </Type>
+  </Table>
+  <Function Name="dbo.SP_UrunEkle" Method="SP_UrunEkle">
+    <Parameter Name="UrunAdii" Parameter="urunAdii" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Cinsiyet" Parameter="cinsiyet" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="HediyeAmacii" Parameter="hediyeAmacii" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="YakinlikDerecesii" Parameter="yakinlikDerecesii" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="YasAraligii" Parameter="yasAraligii" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="BurcAdii" Parameter="burcAdii" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Link" Parameter="link" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UrunListele" Method="UrunListele">
+    <Parameter Name="CinsiyetAdi" Parameter="cinsiyetAdi" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="HediyeAmacAdi" Parameter="hediyeAmacAdi" Type="System.String" DbType="VarChar(100)" />
+    <Parameter Name="YakinlikDerecesi" Parameter="yakinlikDerecesi" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Yas" Parameter="yas" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="Burc" Parameter="burc" Type="System.String" DbType="VarChar(15)" />
+    <ElementType Name="UrunListeleResult">
+      <Column Name="UrunAdi" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="CinsiyetAdi" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="HediyeAmaci" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YakinlikDerecesi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="YasAraligi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="BurcAdi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

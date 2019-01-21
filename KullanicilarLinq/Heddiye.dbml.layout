@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Heddiye">
+  <DataContextMoniker Name="/HeddiyeDataContext" />
+  <nestedChildShapes>
+    <classShape Id="3f3a3794-6899-492d-affd-8bf65f8a12bd" absoluteBounds="0.5, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/HeddiyeDataContext/Admin" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b976d3ce-759a-4c2e-bfe8-1c0acabb8658" absoluteBounds="0.51499999999999968, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0f699777-94c3-4a06-bd11-f4ffda61bdb9" absoluteBounds="5.25, 0.5, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/HeddiyeDataContext/Burc" />
+      <nestedChildShapes>
+        <elementListCompartment Id="64a6c241-79cf-49c9-ab73-befb5b6e9402" absoluteBounds="5.265, 0.96, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="8d66cb2e-3b11-4285-b285-57a70d1ca854" absoluteBounds="5.5, 1.75, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/HeddiyeDataContext/Cinsiyet" />
+      <nestedChildShapes>
+        <elementListCompartment Id="b4b97cb9-b0f9-48e7-b5d3-7b979e33e473" absoluteBounds="5.515, 2.21, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0995045f-3ab9-44a0-ab76-e430065c0f4f" absoluteBounds="3, 3.625, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/HeddiyeDataContext/HediyeAmaci" />
+      <nestedChildShapes>
+        <elementListCompartment Id="eb085077-f561-4d3c-aa7a-6b1d0a46409d" absoluteBounds="3.0149999999999997, 4.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="5ef0b5da-c7f2-4e66-b68c-7d19e40dbeec" absoluteBounds="3.125, 0.5, 2, 2.3478011067708335">
+      <DataClassMoniker Name="/HeddiyeDataContext/Urunler" />
+      <nestedChildShapes>
+        <elementListCompartment Id="289a4e65-5994-4fb1-a2fa-bd1cfee96b09" absoluteBounds="3.1399999999999997, 0.96, 1.9700000000000002, 1.7878011067708335" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.25 : 1.09699625651042); (5.125 : 1.09699625651042)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HeddiyeDataContext/Burc/Burc_Urunler" />
+      <nodes>
+        <classShapeMoniker Id="0f699777-94c3-4a06-bd11-f4ffda61bdb9" />
+        <classShapeMoniker Id="5ef0b5da-c7f2-4e66-b68c-7d19e40dbeec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5.5 : 2.29890055338542); (5.125 : 2.29890055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HeddiyeDataContext/Cinsiyet/Cinsiyet_Urunler" />
+      <nodes>
+        <classShapeMoniker Id="8d66cb2e-3b11-4285-b285-57a70d1ca854" />
+        <classShapeMoniker Id="5ef0b5da-c7f2-4e66-b68c-7d19e40dbeec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(4.0625 : 3.625); (4.0625 : 2.84780110677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HeddiyeDataContext/HediyeAmaci/HediyeAmaci_Urunler" />
+      <nodes>
+        <classShapeMoniker Id="0995045f-3ab9-44a0-ab76-e430065c0f4f" />
+        <classShapeMoniker Id="5ef0b5da-c7f2-4e66-b68c-7d19e40dbeec" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="4618889b-d2a8-4dd7-8d7e-cc0068908203" absoluteBounds="0.625, 3.75, 2, 1.3862939453125">
+      <DataClassMoniker Name="/HeddiyeDataContext/YakinlikDerecesi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0362f0c0-e884-4d62-861b-9551a87c0679" absoluteBounds="0.64000000000000012, 4.21, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.625 : 5.00889322916667); (5.09375 : 5.00889322916667); (5.09375 : 2.84780110677083)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HeddiyeDataContext/YakinlikDerecesi/YakinlikDerecesi_Urunler" />
+      <nodes>
+        <classShapeMoniker Id="4618889b-d2a8-4dd7-8d7e-cc0068908203" />
+        <classShapeMoniker Id="5ef0b5da-c7f2-4e66-b68c-7d19e40dbeec" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(6.5 : 2.94399251302083); (6.5 : 4.91394037109375); (5.17708333333333 : 4.91394037109375 : JumpStart); (5.01041666666667 : 4.91394037109375 : JumpEnd); (2.625 : 4.91394037109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HeddiyeDataContext/Cinsiyet/Cinsiyet_YakinlikDerecesi" />
+      <nodes>
+        <classShapeMoniker Id="8d66cb2e-3b11-4285-b285-57a70d1ca854" />
+        <classShapeMoniker Id="4618889b-d2a8-4dd7-8d7e-cc0068908203" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="66abaab6-6804-4759-b04f-fb59c5f7e22f" absoluteBounds="0.75, 2.375, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/HeddiyeDataContext/YasAraligi" />
+      <nestedChildShapes>
+        <elementListCompartment Id="570cc705-771b-486e-8039-828d94042fd5" absoluteBounds="0.76500000000000012, 2.835, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 2.61140055338542); (3.125 : 2.61140055338542)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/HeddiyeDataContext/YasAraligi/YasAraligi_Urunler" />
+      <nodes>
+        <classShapeMoniker Id="66abaab6-6804-4759-b04f-fb59c5f7e22f" />
+        <classShapeMoniker Id="5ef0b5da-c7f2-4e66-b68c-7d19e40dbeec" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
