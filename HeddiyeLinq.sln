@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KullanicilarLinq", "Kullani
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{FAE2B42F-C7B6-414F-841D-813E7E3A148A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataLinq", "DataLinq\DataLinq.csproj", "{BA40BD27-75EB-44FD-B12C-74809E1744A7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{FAE2B42F-C7B6-414F-841D-813E7E3A148A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FAE2B42F-C7B6-414F-841D-813E7E3A148A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FAE2B42F-C7B6-414F-841D-813E7E3A148A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA40BD27-75EB-44FD-B12C-74809E1744A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA40BD27-75EB-44FD-B12C-74809E1744A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA40BD27-75EB-44FD-B12C-74809E1744A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA40BD27-75EB-44FD-B12C-74809E1744A7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

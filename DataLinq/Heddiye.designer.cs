@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace KullanicilarLinq
+namespace DataLinq
 {
 	using System.Data.Linq;
 	using System.Data.Linq.Mapping;
@@ -51,7 +51,7 @@ namespace KullanicilarLinq
     #endregion
 		
 		public HeddiyeDataContext() : 
-				base(global::KullanicilarLinq.Properties.Settings.Default.HeddiyeConnectionString, mappingSource)
+				base(global::DataLinq.Properties.Settings.Default.HeddiyeConnectionString, mappingSource)
 		{
 			OnCreated();
 		}
