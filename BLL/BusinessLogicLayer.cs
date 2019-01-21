@@ -13,7 +13,7 @@ namespace BLL
         public int UrunKontrol(string UrunAdi, string CinsiyetAdi, string HediyeAmaci, string YakinlikDerecesi, string YasAraligi, string BurcAdi,string link)
         {
             int UrunKontrol = 0;
-            string deneme;
+            string denem = "";
             Urunler u = new Urunler();
             if (!string.IsNullOrEmpty(UrunAdi))
             {
