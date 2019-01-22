@@ -97,6 +97,10 @@
       <Project>{fae2b42f-c7b6-414f-841d-813e7e3a148a}</Project>
       <Name>BLL</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataLinq\DataLinq.csproj">
+      <Project>{ba40bd27-75eb-44fd-b12c-74809e1744a7}</Project>
+      <Name>DataLinq</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
